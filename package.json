@@ -1,12 +1,16 @@
 {
   "name": "pino-logging-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "A small Node.js Logging application workload.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app/server.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Adam Dubey",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "pino": "^6.13.1"
+  }
 }

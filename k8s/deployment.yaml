@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pino-logging-app
+  labels:
+    app: pino-logging-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pino-logging-app
+  template:
+    metadata:
+      labels:
+        app: pino-logging-app
+    spec:
+      containers:
+        - name: pino-logging-app
+          image: jigglybytez/pino-logging-app
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: privateregistrysecret
+        
